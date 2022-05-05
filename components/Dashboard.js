@@ -7,10 +7,11 @@ export default function Dashboard ({categories, words, searchTerm, setSearchTerm
     const [selectedWordId, setSelectedWordId] = useState();
 
     let filteredWords=[];
+    
 
     if (searchTerm){
         filteredWords = words.data.filter((word)  => {
-            return word.attributes.name.includes(searchTerm);
+            return word.attributes.name.toLowerCase().includes(searchTerm.toLowerCase());
         })
         
     } else {
@@ -18,7 +19,7 @@ export default function Dashboard ({categories, words, searchTerm, setSearchTerm
                 return word.attributes.category.data.id === selectedCategoryId;
             })
     }
-    
+
     return (
         <div className={styles.container}>
             <div className={styles.video}>
@@ -46,20 +47,25 @@ export default function Dashboard ({categories, words, searchTerm, setSearchTerm
                     </div>
                  ))}                                                     
             </div>
+            <div className={styles.wordsTitle}>
+                <h2>WORDS</h2>
+            </div>
             <div className={styles.words}>        
-            <h2>WORDS</h2>
                 {filteredWords.map((word) =>(
                     <div 
+                        className={styles.wordsGap}
                         key={word.id}
                         onClick={()=>{
                             setVideoLink(word.attributes.youtubelink)
                             setSelectedWordId(word.id)
-                            }}><a className={(word.id === selectedWordId) ? styles.selected : ''}>{word.attributes.name}</a>     
+                            }}>
+                        <a className={(word.id === selectedWordId) ? styles.selected : ''}>{word.attributes.name}</a>     
+                            
                     </div>
-                ))}           
+                ))}            
             </div>
         </div>
       );    
 }
 
-
+        

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
 
 import Search from "./Search";
 
@@ -24,7 +25,7 @@ export default function Navbar({searchTerm, setSearchTerm}) {
             <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            NDS INDIAN SIGN LANGUAGE
+            INDIAN SIGN LANGUAGE DICTIONARY
             </Typography>
             
             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
