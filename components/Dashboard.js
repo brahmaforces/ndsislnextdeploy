@@ -23,15 +23,17 @@ export default function Dashboard ({categories, words, searchTerm, setSearchTerm
     return (
         <div className={styles.container}>
             <div className={styles.video}>
-                <iframe
-                    src={videoLink}
-                    width="560"
-                    height="315" 
-                    frameBorder='0'
-                    allow='autoplay; encrypted-media'
-                    allowFullScreen
-                    title='video'
-                />
+
+                    <iframe
+                        src={videoLink}
+                        width="560"
+                        height="315" 
+                        frameBorder='0'
+                        allow='autoplay; encrypted-media'
+                        allowFullScreen
+                        title='video'
+                    />
+               
             </div>
             <div className={styles.categories}>
                 <h2>CATEGORIES</h2>

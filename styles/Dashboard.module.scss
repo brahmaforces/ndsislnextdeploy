@@ -9,8 +9,26 @@
     justify-self: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-right: 3rem;
     background-color: rgba(211, 211, 211, 0.712);
+    width: 100%;
+    height: 0;
+
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+
+    iframe{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
+
+ 
 
 .categories {
     grid-column: 1 / 2;
@@ -53,7 +71,8 @@
     
     .video {
         grid-column: 1 / 1;
-        grid-row: 1 / 2;;
+        grid-row: 1 / 2;
+        margin-right: 0;
     }
     
     .categories {
