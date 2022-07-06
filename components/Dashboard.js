@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function Dashboard ({categories, words, searchTerm, setSearchTerm}) {
     const [selectedCategoryId, setSelectedCategoryId] = useState();
-    const [videoLink, setVideoLink] =useState("https://www.youtube.com//embed/fhTJcrHVMpk")
+    const [videoLink, setVideoLink] =useState("https://www.youtube.com/embed/fhTJcrHVMpk")
     const [selectedWordId, setSelectedWordId] = useState();
 
     let filteredWords=[];
